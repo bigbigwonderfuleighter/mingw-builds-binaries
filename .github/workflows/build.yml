@@ -55,6 +55,7 @@ jobs:
         --jobs=4
         --rev=${{ needs.split-tag.outputs.mingw-rev }}
         --with-default-msvcrt=${{ matrix.msvcrt }}
+        --with-default-win32-winnt=0x501
         --rt-version=${{ needs.split-tag.outputs.rt-version }}
         --threads=${{ matrix.threads }}
         --exceptions=${{ matrix.exceptions }}
