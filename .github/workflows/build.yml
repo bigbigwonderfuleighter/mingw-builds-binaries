@@ -39,7 +39,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: 'niXman/mingw-builds'
+        repository: 'bigbigwonderfuleighter/mingw-builds'
         ref: 'develop'
 
     - uses: msys2/setup-msys2@v2
@@ -62,9 +62,6 @@ jobs:
         --arch=${{ matrix.arch }}
         --bin-compress
         --enable-languages=c,c++,fortran
-        --cflags='-D_WIN32_WINNT=0x501'
-        --cppflags='-D_WIN32_WINNT=0x501'
-        --cxxflags='-D_WIN32_WINNT=0x501'
 
     - name: Upload
       uses: actions/upload-artifact@v3
