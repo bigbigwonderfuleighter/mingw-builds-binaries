@@ -62,6 +62,9 @@ jobs:
         --arch=${{ matrix.arch }}
         --bin-compress
         --enable-languages=c,c++,fortran
+        --cflags='-D_WIN32_WINNT=0x501'
+        --cppflags='-D_WIN32_WINNT=0x501'
+        --cxxflags='-D_WIN32_WINNT=0x501'
 
     - name: Upload
       uses: actions/upload-artifact@v3
